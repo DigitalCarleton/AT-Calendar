@@ -1,0 +1,83 @@
+body {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: thin;
+}
+
+.container {
+    display: flex;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+
+#schedules {
+    height: 100%;
+    width: 20%;
+    margin-top: 20px;
+}
+
+.schedulee {
+    width: 100%;
+    height: 20px;
+    margin: 6.25px 0px;
+    padding: 12.5px 0px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid rgb(218, 220, 224);
+}
+
+.schedulee.selected {
+    background: rgb(26, 115, 232);
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(1px 1px 1px rgb(210,227,252));
+}
+
+.schedulee:hover:not(.selected) {
+    background: rgb(210,227,252);
+    color: rgb(0,0,0);
+    cursor: pointer;
+}
+
+.schedulee.selected:hover {
+    cursor: pointer;
+}
+
+#calendars {
+    height: 100%;
+    width: 80%;
+}
+
+#calendars iframe {
+    height: 97.75vh;
+    width: 100%;
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    #schedules {
+        width: 30%;
+    }
+
+    #calendars {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #schedules {
+        width: 100%;
+        margin-top: unset;
+    }
+
+    #calendars {
+        width: 100%;
+    }
+}
